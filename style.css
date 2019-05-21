@@ -21,12 +21,15 @@ nav .top-bar {
 }
 
 nav .top-bar .bar-segment {
-    padding: 1em;
+    padding: .8em 1em;
+    font-size: 1.05rem;
+    height: 100%;
 }
 
 .segment1 {
     background-color: #fff;
     color: #212121;
+    font-weight: bold;
 }
 
 li a {
@@ -36,7 +39,7 @@ li a {
 }
 
 li a:hover {
-    opacity: .65;
+    opacity: .6;
 }
 
 li a:visited {
@@ -63,6 +66,7 @@ nav .main-menu li {
     width: 150px;
     padding: 1.2em 1em;
     text-align: center;
+    font-size: 1.05rem;
 }
 
 .drop-menu {
@@ -83,6 +87,10 @@ nav .main-menu li {
     transform-origin: top center;
 }
 
+.drop-menu li:first-child {
+    margin-top: .5em;
+}
+
 .drop-menu li:hover {
     background-color: #222;
 }
@@ -92,37 +100,35 @@ nav .main-menu li {
     opacity: 0;
 }
 
+/*********** Drop-Menu Animations **************/
+
 .main-menu-li:hover > .drop-menu li:nth-child(1) {
     animation: menuDrop 250ms ease-in-out forwards;
 }
 
 .main-menu-li:hover > .drop-menu li:nth-child(2) {
     animation: menuDrop 250ms ease-in-out forwards;
-    animation-delay: 200ms;
+    animation-delay: 100ms;
 }
 
 .main-menu-li:hover > .drop-menu li:nth-child(3) {
     animation: menuDrop 250ms ease-in-out forwards;
-    animation-delay: 400ms;
+    animation-delay: 200ms;
 }
 
 .main-menu-li:hover > .drop-menu li:nth-child(4) {
     animation: menuDrop 250ms ease-in-out forwards;
-    animation-delay: 600ms;
+    animation-delay: 300ms;
 }
 
 @keyframes menuDrop {
     0% {
         opacity: 0;
-        transform: rotateX(-90deg);
-    }
-
-    65% {
-        transform: rotateX(45deg)
+        transform: rotateX(-90deg) translateY(30px);
     }
 
     100% {
         opacity: 1;
-        transform: rotateX(0deg);
+        transform: rotateX(0deg) translateY(0);
     }
 }
