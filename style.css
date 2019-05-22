@@ -11,6 +11,8 @@ html {
 
 /*********** Top Bar **************/
 
+a { color: inherit; }
+
 nav .top-bar {
     min-width: 100%;
     height: 3rem;
